@@ -1,0 +1,737 @@
+[
+    {
+      "id": 1,
+      "question": "When you’re at a social gathering, how do you usually spend your time — seeking out lots of new people, or sticking with a few familiar ones?",
+      "dichotomy": "E/I",
+      "functions": {
+        "E": [
+          "Fe",
+          "Se"
+        ],
+        "I": [
+          "Fi",
+          "Ni"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 2,
+      "question": "In your daily life, do you generally find yourself more energized by spending time with others, or by spending time alone?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 3,
+      "question": "How do you usually feel after a busy day with lots of interaction — recharged or drained?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 4,
+      "question": "When you start talking about an idea, do you usually think out loud as you go, or reflect first and then speak?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 5,
+      "question": "Do you usually prefer being at the center of attention, or do you feel more comfortable on the sidelines?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 6,
+      "question": "When meeting new people, how do you usually approach them — do you jump right in or take time to warm up?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 7,
+      "question": "In group settings, do you most often take the lead in conversations, or do you usually listen and respond when others bring you in?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 8,
+      "question": "How do you usually process your experiences — by talking them through with others, or by thinking about them quietly on your own?",
+      "dichotomy": "E/I",
+      "functions": {
+        "E": [
+          "Fe",
+          "Se"
+        ],
+        "I": [
+          "Fi",
+          "Ni"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 9,
+      "question": "Do you usually find yourself seeking out variety and stimulation, or sticking to what feels familiar and comfortable?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 10,
+      "question": "In your everyday life, how often do you usually need quiet downtime to recharge compared to time with people?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 11,
+      "question": "When you’re learning something new, do you usually prefer focusing on the concrete facts and details, or looking at the bigger picture and possibilities?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 12,
+      "question": "Do you usually trust your direct experience more, or your interpretations and insights about what those experiences mean?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 13,
+      "question": "When someone explains something to you, do you usually prefer step-by-step instructions, or the overall concept first?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 14,
+      "question": "How do you usually remember things better — as specific details, or as general patterns and impressions?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 15,
+      "question": "Do you usually find yourself more comfortable with practical, hands-on tasks, or with abstract, imaginative thinking?",
+      "dichotomy": "E/I",
+      "functions": {
+        "E": [
+          "Fe",
+          "Se"
+        ],
+        "I": [
+          "Fi",
+          "Ni"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 16,
+      "question": "When solving problems, do you usually look at what has worked before, or explore new and untested approaches?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 17,
+      "question": "Do you usually focus more on what’s happening right now, or on what might happen in the future?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 18,
+      "question": "When you read or listen, do you usually notice the exact wording/details, or the underlying themes and meanings?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 19,
+      "question": "In your daily life, do you usually find yourself paying closer attention to what’s concrete and real, or to what’s possible and theoretical?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 20,
+      "question": "Do you usually prefer working with proven methods and facts, or experimenting with fresh ideas and new connections?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 21,
+      "question": "When making decisions, do you usually focus more on what feels logical and consistent, or on how people might be affected?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 22,
+      "question": "Do you usually find yourself valuing fairness and rules more, or harmony and understanding more?",
+      "dichotomy": "E/I",
+      "functions": {
+        "E": [
+          "Fe",
+          "Se"
+        ],
+        "I": [
+          "Fi",
+          "Ni"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 23,
+      "question": "When giving feedback, do you usually point out what needs improvement first, or do you highlight positives first?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 24,
+      "question": "Do you usually feel more comfortable making tough, objective decisions, or weighing personal values and relationships?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 25,
+      "question": "When people disagree, do you usually focus on figuring out who’s right, or on keeping the peace between them?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 26,
+      "question": "Do you usually prefer clarity and truth, even if it might upset someone, or softening your words to keep things comfortable?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 27,
+      "question": "In your daily life, do you usually evaluate situations by asking “What makes sense here?” or “What feels right here?”",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 28,
+      "question": "Do you usually trust your head more or your heart when faced with a difficult choice?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 29,
+      "question": "When people come to you with a problem, do you usually offer practical solutions first, or empathy and support first?",
+      "dichotomy": "E/I",
+      "functions": {
+        "E": [
+          "Fe",
+          "Se"
+        ],
+        "I": [
+          "Fi",
+          "Ni"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 30,
+      "question": "Do you usually see yourself as more of an analyzer of situations, or as a harmonizer of people?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 31,
+      "question": "Do you usually prefer to have a clear plan before starting something, or do you like to stay flexible and adjust as you go?",
+      "dichotomy": "S/N",
+      "functions": {
+        "S": [
+          "Si",
+          "Se"
+        ],
+        "N": [
+          "Ni",
+          "Ne"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 32,
+      "question": "How do you usually feel about deadlines — do you stick to them well in advance, or do you often work best at the last minute?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 33,
+      "question": "In your daily life, do you usually prefer structure and organization, or keeping things open-ended and spontaneous?",
+      "dichotomy": "T/F",
+      "functions": {
+        "T": [
+          "Ti",
+          "Te"
+        ],
+        "F": [
+          "Fi",
+          "Fe"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 34,
+      "question": "When traveling, do you usually plan your itinerary carefully, or leave lots of room for discovery?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    },
+    {
+      "id": 35,
+      "question": "Do you usually feel more comfortable finishing tasks before relaxing, or mixing work and play as you go?",
+      "dichotomy": "J/P",
+      "functions": {
+        "J": [
+          "Te",
+          "Si"
+        ],
+        "P": [
+          "Ne",
+          "Ti"
+        ]
+      },
+      "keywords": {
+        "keyword1": "placeholder1",
+        "keyword2": "placeholder2",
+        "keyword3": "placeholder3",
+        "keyword4": "placeholder4"
+      }
+    }
+  ]
