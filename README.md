@@ -8,3 +8,6 @@ A chatbot that converses with the user to analyze their personality. Based on th
 
 !! Disclaimer !!
 This project is for fun and entertainment purposes only. Not a licensed mental health professional. 
+
+The MBTI questions were based of this Personality Test:
+https://www.maximusveritas.com/wp-content/uploads/2017/07/MBTI-Personality-Type-Test.pdf
