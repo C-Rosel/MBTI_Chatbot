@@ -10,7 +10,21 @@ from pathlib import Path
 from core.processing import process_user_input
 from core.scoring import update_scores, assess_results
 
+# consts 
+MAX_CHAR = 150
+
+_WELCOME_MSG = """
+Hello, there. My name is Athena, I'm here to help you assess your personality and learn more about yourself.
+We'll go through some questions to dig into what makes up who you are! Please answer conscisely and honestly!
+
+Disclaimer: This is an AI not a licensed mental health professional. This is purely for entertainment purposes only.
+Your personal data will not be stored or kept beyond the session. 
+
+When you are ready to begin, please click the 'Begin' button below.
+""" #but make it nice :) athena name
+
 DATA_PATH = Path(__file__).parent / "data" / "MBTI_Questions.json"
+
 if "questions" not in st.session_state:
     try:
         with open(DATA_PATH, "r", encoding="utf-8") as f:
@@ -108,16 +122,6 @@ def save_results():
     #FIXME implement actual saving logic
     # format a nice analysis with graphics maybe a word map!! that can be done with nlp 
     msg.toast("Results saved!")
-
-_WELCOME_MSG = """
-Hello, there. My name is Athena, I'm here to help you assess your personality and learn more about yourself.
-We'll go through some questions to dig into what makes up who you are! Please answer conscisely and honestly!
-
-Disclaimer: This is an AI not a licensed mental health professional. This is purely for entertainment purposes only.
-Your personal data will not be stored or kept beyond the session. 
-
-When you are ready to begin, please click the 'Begin' button below.
-""" #but make it nice :) athena name
         
 st.set_page_config(
     page_title="AI Project: TherapyBot", 
@@ -140,10 +144,8 @@ if st.button("Begin"):
     
     st.chat_message("athena").write_stream(welcome_msg) #not saved for now.
 
-    user_name = st.text_input("What is your name?") #FIXME list: add to sessiono_state, Athena uses it in responses, "Prefer not to say" button, If "Developer" feed in placeholder_responses for testing. 
+    user_name = st.text_input("What is your name?", max_chars=MAX_CHAR) #FIXME list: test user_name and button, add If "Developer" feed in placeholder_responses for testing. 
     if st.button("Prefer not to say"):
-        user_name = None
-        st.session_state['user_name'] = user_name # or idk something to omit it from athena responses
         st.chat_message("athena").write_stream("Understood. Let's get started then. :)")
     if user_name:
         st.session_state['user_name'] = user_name
@@ -158,7 +160,7 @@ if st.button("Begin"):
         st.session_state.messages.append({"role": "athena", "content": get_question_by_id(qid).get("question")})
 
 # the convo: map user input to current question, advance, and present next question or assess
-if prompt := st.chat_input("Speak with Athena"):
+if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR):
 
     user_name = st.session_state.get('user_name', None)
     user_message.markdown(prompt) 
