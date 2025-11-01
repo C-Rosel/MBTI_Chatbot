@@ -25,7 +25,9 @@ When you are ready to begin, please click the 'Begin' button below.
 
 DATA_PATH = Path(__file__).parent / "data" / "MBTI_Questions.json"
 
-if "questions" not in st.session_state:
+PLACEHOLDER_RESPONSES = Path(__file__).parent / "testing" / "placeholder_responses.json"
+
+if "questions" not in st.session_state: 
     try:
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             st.session_state.questions = json.load(f) #add list of questions to session state! to be accessed later
@@ -138,6 +140,7 @@ if "messages" not in st.session_state:
 
 
 user_message = st.chat_message("user") 
+dev_message = st.chat_message("developer")
 
 # begin sequence: welcome user, get name, select qs
 if st.button("Begin"):
@@ -147,7 +150,10 @@ if st.button("Begin"):
     user_name = st.text_input("What is your name?", max_chars=MAX_CHAR) #FIXME list: test user_name and button, add If "Developer" feed in placeholder_responses for testing. 
     if st.button("Prefer not to say"):
         st.chat_message("athena").write_stream("Understood. Let's get started then. :)")
-    if user_name:
+    elif user_name == "Developer":
+        st.chat_message("athena").write_stream("Welcome back, Developer... Testing mode activated.")
+        st.session_state['user_name'] = "Developer"
+    elif user_name:
         st.session_state['user_name'] = user_name
         st.chat_message("athena").write_stream("Nice to meet you, {user_name}! Let's get started then. :)")
         
@@ -159,8 +165,52 @@ if st.button("Begin"):
     if qid is not None:
         st.session_state.messages.append({"role": "athena", "content": get_question_by_id(qid).get("question")})
 
+if st.session_state.get("user_name") == "Developer":
+    try:
+        with open(PLACEHOLDER_RESPONSES, "r", encoding="utf-8") as f:
+            dev_responses = json.load(f) 
+    except FileNotFoundError:
+        dev_responses = []
+        st.error(f"Questions file not found at: {PLACEHOLDER_RESPONSES}")
+    except json.JSONDecodeError as e:
+        dev_responses = []
+        st.error(f"Error parsing questions JSON: {e}")
+
+    dev_dict = {item['question_id']: item['response'] for item in dev_responses}
+
+    while st.session_state.get('q_index', 0) < len(st.session_state.get("selected_question_ids", [])):
+        current_qid = st.session_state.get("current_q_id")
+        if current_qid is not None:
+            st.session_state.answers[current_qid] = dev_dict[current_qid]
+            dev_message.markdown(dev_dict[current_qid])
+            st.session_state.messages.append({"role": "developer", "content": dev_dict[current_qid]})
+
+            analysis = process_user_input(dev_dict[current_qid]) #nlp processing of user input #FIXME expand this to do actual analysis
+
+            st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
+
+
+        st.session_state.q_index = st.session_state.get("q_index", 0) + 1
+        next_qid = show_current_question()
+        if next_qid is not None:
+            st.session_state.messages.append({"role": "athena", "content": get_question_by_id(next_qid).get("question")})
+
+
+    st.chat_message("athena").write("All assessment answers have been filled in, Developer.")
+    time.sleep(1)
+    st.chat_message("athena").write("Final scoring is next...")
+    time.sleep(2)
+    
+    assess_results() #FIXME implement this to show final results
+
+    if st.button("Save Results"):
+        st.chat_message("athena").write("I'm saving your results now...")
+        save_results()
+    
+
+
 # the convo: map user input to current question, advance, and present next question or assess
-if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR):
+if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR): #make into elif??
 
     user_name = st.session_state.get('user_name', None)
     user_message.markdown(prompt) 
