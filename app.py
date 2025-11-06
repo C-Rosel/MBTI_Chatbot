@@ -304,8 +304,8 @@ else:
         st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
 
         #placeholder Athena response
-        current_response = response_generator() + ", {user_name}." if user_name else response_generator()
-        st.chat_message("athena").write_stream(current_response) #maybe a random probability of athena responding at all. 
+        # current_response = response_generator() + ", {user_name}." if user_name else response_generator()
+        # st.chat_message("athena").write_stream(current_response) #maybe a random probability of athena responding at all. 
 
         # map user answer to curr q in the dict
         current_qid = st.session_state.get("current_q_id")
