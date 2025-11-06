@@ -7,25 +7,75 @@ import random
 import json 
 from pathlib import Path
 
-from core.processing import process_user_input
-from core.scoring import update_scores, assess_results
+#from core.preprocessing import process_user_input
+#from core.scoring import update_scores, assess_results
+
+st.set_page_config(
+    page_title="AI Project: TherapyBot", 
+    layout="wide"
+)
+
+#FIXME Placeholder functions: Remove once real functions are implemented
+
+def process_user_input(user_input):
+    # Placeholder: In real implementation, analyze the input text
+    # For demo, return random analysis
+    analysis = {
+        "E/I": random.choice(["E", "I"]),
+        "S/N": random.choice(["S", "N"]),
+        "T/F": random.choice(["T", "F"]),
+        "J/P": random.choice(["J", "P"]),
+    }
+    return analysis
+
+def update_scores(current_scores, analysis):
+    # Placeholder: Update scores based on analysis
+    for dichotomy, trait in analysis.items():
+        current_scores[dichotomy] = current_scores.get(dichotomy, {})
+        current_scores[dichotomy][trait] = current_scores[dichotomy].get(trait, 0) + 1
+    return current_scores
+
+def assess_results():
+    # Placeholder: Display final results based on scores
+    scores = st.session_state.get('scores', {})
+    st.markdown("## Assessment Results")
+    st.markdown("Here is a summary of your personality assessment:")
+    tally = {}
+    for dichotomy, traits in scores.items():
+        dominant_trait = max(traits, key=traits.get)
+        tally[dichotomy] = dominant_trait
+    st.markdown("**Your dominant traits by dichotomy:**")
+    for d, t in tally.items():
+        st.markdown(f"- {d}: {t}")
+    st.markdown("**Your answers:**")
+    answers = st.session_state.get('answers', {})
+    for qid, ans in answers.items():
+        q = get_question_by_id(qid)
+        st.markdown(f"- **Q {qid}** ({q.get('dichotomy') if q else '??'}): {ans}")
+    st.markdown("**Simple tally by dichotomy (demo):**")
+    for d, c in tally.items():
+        st.markdown(f"- {d}: {c}")
+    st.markdown("\n_Add a scoring algorithm to convert these into MBTI letters._")
 
 # consts 
 MAX_CHAR = 150
 
 _WELCOME_MSG = """
-Hello, there. My name is Athena, I'm here to help you assess your personality and learn more about yourself.
-We'll go through some questions to dig into what makes up who you are! Please answer conscisely and honestly!
-
 Disclaimer: This is an AI not a licensed mental health professional. This is purely for entertainment purposes only.
 Your personal data will not be stored or kept beyond the session. 
 
-When you are ready to begin, please click the 'Begin' button below.
+Hello, there. My name is Athena, I'm here to help you assess your personality and learn more about yourself.
+We'll go through some questions to dig into what makes up who you are! Please answer conscisely and honestly!
 """ #but make it nice :) athena name
 
 DATA_PATH = Path(__file__).parent / "data" / "MBTI_Questions.json"
 
 PLACEHOLDER_RESPONSES = Path(__file__).parent / "testing" / "placeholder_responses.json"
+ 
+# session state inits (persistent across reruns)
+
+if "dev_mode" not in st.session_state:
+    dev_mode = False
 
 if "questions" not in st.session_state: 
     try:
@@ -38,7 +88,11 @@ if "questions" not in st.session_state:
         st.session_state.questions = []
         st.error(f"Error parsing questions JSON: {e}")
 
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
 # streaming :))
+
 def welcome_msg(): 
     for word in _WELCOME_MSG.split(" "):
         yield word + " "
@@ -63,6 +117,7 @@ def response_generator(): #this is random bs go haha. we can make it better late
         yield word + " "
         time.sleep(0.05) 
 
+#rand functions
 
 def select_questions_per_dichotomy(n=5): #n is number of questions per dichotomy
     # st.session_state.selected_question_ids: list of question ids (shuffled)
@@ -124,48 +179,68 @@ def save_results():
     #FIXME implement actual saving logic
     # format a nice analysis with graphics maybe a word map!! that can be done with nlp 
     msg.toast("Results saved!")
-        
-st.set_page_config(
-    page_title="AI Project: TherapyBot", 
-    layout="wide"
-)
 
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
+#FIXME new session function? like a hard reset to avoid leftover values
+       
 
 # for message in st.session_state.messages: #display msgs on app rerun eh perhaps not
 #     with st.chat_message(message["role"]): #author
 #         st.markdown(message["content"]) #content
 
 
-user_message = st.chat_message("user") 
-dev_message = st.chat_message("developer")
+# state tracking flags
+if "begun" not in st.session_state:
+    st.session_state["begun"] = False
+if "name_confirmed" not in st.session_state:
+    st.session_state["name_confirmed"] = False
+if "questions_selected" not in st.session_state:
+    st.session_state["questions_selected"] = False
 
 # begin sequence: welcome user, get name, select qs
 if st.button("Begin"):
-    
-    st.chat_message("athena").write_stream(welcome_msg) #not saved for now.
+    # mark that we've started the flow and stream the welcome message
+    st.session_state["begun"] = True
+    st.session_state["name_confirmed"] = False
+    st.session_state["questions_selected"] = False
+    st.chat_message("athena").write_stream(welcome_msg)
 
-    user_name = st.text_input("What is your name?", max_chars=MAX_CHAR) #FIXME list: test user_name and button, add If "Developer" feed in placeholder_responses for testing. 
-    if st.button("Prefer not to say"):
-        st.chat_message("athena").write_stream("Understood. Let's get started then. :)")
-    elif user_name == "Developer":
-        st.chat_message("athena").write_stream("Welcome back, Developer... Testing mode activated.")
-        st.session_state['user_name'] = "Developer"
-    elif user_name:
-        st.session_state['user_name'] = user_name
-        st.chat_message("athena").write_stream("Nice to meet you, {user_name}! Let's get started then. :)")
-        
-    
-    select_questions_per_dichotomy(5) #we can adjust the length of the assessment here
+# one flag down, two to go. need name
+if st.session_state.get("begun") and not st.session_state.get("name_confirmed"):
+    # use a persistent text input bound to session_state so it survives reruns
+    st.text_input("What is your name?", key="name_input", max_chars=MAX_CHAR)
+
+    cols = st.columns([1, 1]) # formatting buttons side by side
+    with cols[0]:
+        if st.button("Submit Name"):
+            provided = st.session_state.get("name_input", "").strip() # roundabout wayyyyy
+            if provided == "Developer":
+                st.session_state['user_name'] = "Developer"
+                st.session_state['dev_mode'] = True
+            else:
+                st.session_state['user_name'] = provided
+                st.session_state['dev_mode'] = False
+
+            st.session_state["name_confirmed"] = True #thats two down
+            greeting = f"Nice to meet you, {st.session_state.get('user_name') or 'friend'}! Let's get started then. :)"
+            st.chat_message("athena").write_stream(question_stream(greeting))
+
+    with cols[1]:
+        if st.button("Prefer not to say"):
+            st.session_state['user_name'] = None
+            st.session_state['dev_mode'] = False
+            st.session_state["name_confirmed"] = True
+            st.chat_message("athena").write_stream(question_stream("Understood. Let's get started then. :)"))
+
+# and finally we select questions 
+if st.session_state.get("name_confirmed") and not st.session_state.get("questions_selected"):
+    select_questions_per_dichotomy(5)
+    st.session_state["questions_selected"] = True
     # show first question
     qid = show_current_question()
-    # record the displayed question into messages history so UI reruns can reuse it if needed
     if qid is not None:
         st.session_state.messages.append({"role": "athena", "content": get_question_by_id(qid).get("question")})
 
-if st.session_state.get("user_name") == "Developer":
+if st.session_state.get('dev_mode', False) == True:
     try:
         with open(PLACEHOLDER_RESPONSES, "r", encoding="utf-8") as f:
             dev_responses = json.load(f) 
@@ -178,18 +253,25 @@ if st.session_state.get("user_name") == "Developer":
 
     dev_dict = {item['question_id']: item['response'] for item in dev_responses}
 
-    while st.session_state.get('q_index', 0) < len(st.session_state.get("selected_question_ids", [])):
-        current_qid = st.session_state.get("current_q_id")
-        if current_qid is not None:
-            st.session_state.answers[current_qid] = dev_dict[current_qid]
-            dev_message.markdown(dev_dict[current_qid])
-            st.session_state.messages.append({"role": "developer", "content": dev_dict[current_qid]})
+    # Fill remaining developer responses in one pass (avoid blocking while loop which hangs Streamlit)
+    remaining_ids = st.session_state.get("selected_question_ids", [])[st.session_state.get('q_index', 0):]
+    for current_qid in remaining_ids:
+        # get developer response for this question id (skip if missing)
+        resp = dev_dict.get(current_qid)
+        if resp is None:
+            # skip missing test data
+            st.session_state.q_index = st.session_state.get("q_index", 0) + 1
+            continue
 
-            analysis = process_user_input(dev_dict[current_qid]) #nlp processing of user input #FIXME expand this to do actual analysis
+        st.session_state.answers[current_qid] = resp
+        with st.chat_message("developer"):
+            st.markdown(resp)
+        st.session_state.messages.append({"role": "developer", "content": resp})
 
-            st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
+        analysis = process_user_input(resp)  # nlp processing of user input (placeholder)
+        st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis)
 
-
+        # advance index and show next question (non-blocking)
         st.session_state.q_index = st.session_state.get("q_index", 0) + 1
         next_qid = show_current_question()
         if next_qid is not None:
@@ -208,43 +290,42 @@ if st.session_state.get("user_name") == "Developer":
         save_results()
     
 
+else:
+    # the convo: map user input to current question, advance, and present next question or assess
+    if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR): #make into elif??
 
-# the convo: map user input to current question, advance, and present next question or assess
-if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR): #make into elif??
+        user_name = st.session_state.get('user_name', None)
+        with st.chat_message("user"):
+            st.markdown(prompt)
+        st.session_state.messages.append({"role": "user", "content": prompt})
 
-    user_name = st.session_state.get('user_name', None)
-    user_message.markdown(prompt) 
-    st.session_state.messages.append({"role": "user", "content": prompt})
+        analysis = process_user_input(prompt) #nlp processing of user input #FIXME expand this to do actual analysis
 
-    analysis = process_user_input(prompt) #nlp processing of user input #FIXME expand this to do actual analysis
+        st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
 
-    st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
-
-
-    #placeholder Athena response 
-    with st.chat_message("athena"):
+        #placeholder Athena response
         current_response = response_generator() + ", {user_name}." if user_name else response_generator()
-        st.chat_message("athena").write_stream(current_response)
+        st.chat_message("athena").write_stream(current_response) #maybe a random probability of athena responding at all. 
 
-    # map user answer to curr q in the dict
-    current_qid = st.session_state.get("current_q_id")
-    if current_qid is not None:
-        st.session_state.answers[current_qid] = prompt #map q id to user answer
+        # map user answer to curr q in the dict
+        current_qid = st.session_state.get("current_q_id")
+        if current_qid is not None:
+            st.session_state.answers[current_qid] = prompt #map q id to user answer
 
 
-    st.session_state.q_index = st.session_state.get("q_index", 0) + 1 # NEXT!
+        st.session_state.q_index = st.session_state.get("q_index", 0) + 1 # NEXT!
 
-    # cont or end assessment
-    if st.session_state.q_index < len(st.session_state.get("selected_question_ids", [])): #curr to end of sample
-        next_qid = show_current_question()
-        if next_qid is not None:
-            st.session_state.messages.append({"role": "athena", "content": get_question_by_id(next_qid).get("question")})
-    else:
-        st.chat_message("athena").write("Thank you for completing the assessment, {user_name}!" if user_name else "Thank you for completing the assessment!")
-        assess_results() #FIXME implement this to show final results
-        if st.button("Save Results"):
-            st.chat_message("athena").write("I'm saving your results now...")
-            save_results()
+        # cont or end assessment
+        if st.session_state.q_index < len(st.session_state.get("selected_question_ids", [])): #curr to end of sample
+            next_qid = show_current_question()
+            if next_qid is not None:
+                st.session_state.messages.append({"role": "athena", "content": get_question_by_id(next_qid).get("question")})
+        else:
+            st.chat_message("athena").write("Thank you for completing the assessment, {user_name}!" if user_name else "Thank you for completing the assessment!")
+            assess_results() #FIXME implement this to show final results
+            if st.button("Save Results"):
+                st.chat_message("athena").write("I'm saving your results now...")
+                save_results()
 
 
 ## RESULTS to be implemented bar graph? idk too many ideas
