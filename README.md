@@ -1,6 +1,7 @@
-# CSE 4633 Fall 2025
+# CSE 4633 Fall 2025: AI Project 1
 
-## AI Project 1
+AI Techniques used:
+* NLP 
 
 # TherapyBot
 
@@ -15,10 +16,12 @@ https://www.maximusveritas.com/wp-content/uploads/2017/07/MBTI-Personality-Type-
 ## How to Run
 
 Clone the repo
+
 ``` git clone https://github.com/C-Rosel/MBTI_Chatbot.git ```
 
 Create a python virtual environment
 Install the requirements 
+
 ``` pip install -r requirements.txt```
 
 Run the app!
