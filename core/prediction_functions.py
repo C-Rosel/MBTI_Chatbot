@@ -7,10 +7,10 @@ import pandas as pd
 import numpy as np
 
 # load classifiers
-EI_model = joblib.load("ei_model.joblib")
-SN_model = joblib.load("sn_model.joblib")
-TF_model = joblib.load("tf_model.joblib")
-JP_model = joblib.load("jp_model.joblib")
+EI_model = joblib.load("models/ei_model.joblib")
+SN_model = joblib.load("models/sn_model.joblib")
+TF_model = joblib.load("models/tf_model.joblib")
+JP_model = joblib.load("models/jp_model.joblib")
 
 # load embedding model
 embed_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
