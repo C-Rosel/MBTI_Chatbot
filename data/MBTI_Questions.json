@@ -31,7 +31,7 @@
     },
     {
       "id": 3,
-      "question": "Do you think it's worse to have your 'head in the clouds' or to be 'stuck in a rut'?",
+      "question": "Would you rather be 'stuck in a rut' or have your 'head in the clouds' when trying to find a solution to something?",
       "dichotomy": "S/N",
       "functions": {
         "S": [
@@ -196,7 +196,7 @@
     },
     {
       "id": 14,
-      "question": "What bothers you more — a disorganized environment or a rigid routine?",
+      "question": "Do you tend to keep your environment neat and organized, or keep it messy or chaotic?",
       "dichotomy": "J/P",
       "functions": {
         "J": [
@@ -376,7 +376,7 @@
     },
     {
       "id": 26,
-      "question": "When facing conflict, do you think it is worse to be unjust or merciless? ",
+      "question": "When facing conflict, do you prioritize being just and fair, or kind and merciful?",
       "dichotomy": "T/F",
       "functions": {
         "T": [
