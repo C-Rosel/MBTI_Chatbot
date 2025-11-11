@@ -28,10 +28,12 @@ def predict_EI(question_id, user_answer):
 
     if prob_E >= 0.5:
         pred_label = "E"
+        prob = prob_E
     else:
         pred_label = "I"
+        prob = 1 - prob_E
 
-    return pred_label, prob_E
+    return pred_label, prob
 
 def predict_SN(question_id, user_answer):
     text = f"Q: {question_id} A: {user_answer}"
@@ -42,10 +44,12 @@ def predict_SN(question_id, user_answer):
 
     if prob_S >= 0.5:
         pred_label = "S"
+        prob = prob_S
     else:
         pred_label = "N"
+        prob = 1 - prob_S
 
-    return pred_label, prob_S
+    return pred_label, prob
 
 def predict_TF(question_id, user_answer):
     text = f"Q: {question_id} A: {user_answer}"
@@ -56,10 +60,12 @@ def predict_TF(question_id, user_answer):
 
     if prob_T >= 0.5:
         pred_label = "T"
+        prob = prob_T
     else:
         pred_label = "F"
+        prob = 1 - prob_T
 
-    return pred_label, prob_T
+    return pred_label, prob
 
 def predict_JP(question_id, user_answer):
     text = f"Q: {question_id} A: {user_answer}"
@@ -70,10 +76,12 @@ def predict_JP(question_id, user_answer):
 
     if prob_J >= 0.5:
         pred_label = "J"
+        prob = prob_J
     else:
         pred_label = "P"
+        prob = 1 - prob_J
 
-    return pred_label, prob_J
+    return pred_label, prob
 
 def predict_dichotomy(question_id, user_answer, dichotomy):
     text = f"Q: {question_id} A: {user_answer}"
@@ -87,6 +95,7 @@ def predict_dichotomy(question_id, user_answer, dichotomy):
             pred_label = "E"
         else:
             pred_label = "I"
+            prob = 1 - prob
     elif dichotomy == "S/N":
         prob = SN_model.predict_proba(embedding)[0][1]
 
@@ -94,6 +103,7 @@ def predict_dichotomy(question_id, user_answer, dichotomy):
             pred_label = "S"
         else:
             pred_label = "N"
+            prob = 1 - prob
     elif dichotomy == "T/F":
         prob = TF_model.predict_proba(embedding)[0][1]
 
@@ -101,6 +111,7 @@ def predict_dichotomy(question_id, user_answer, dichotomy):
             pred_label = "T"
         else:
             pred_label = "F"
+            prob = 1 - prob
     elif dichotomy == "J/P":
         prob = JP_model.predict_proba(embedding)[0][1]
 
@@ -108,6 +119,7 @@ def predict_dichotomy(question_id, user_answer, dichotomy):
             pred_label = "J"
         else:
             pred_label = "P"
+            prob = 1 - prob
 
     return pred_label, prob
 
