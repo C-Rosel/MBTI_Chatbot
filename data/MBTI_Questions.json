@@ -121,7 +121,7 @@
     },
     {
       "id": 9,
-      "question": "Do you seek about people who are sensible and realistic, or imaginative and innovative?",
+      "question": "Do you seek people who are sensible and realistic, or imaginative and innovative?",
       "dichotomy": "S/N",
       "functions": {
         "S": [
@@ -436,7 +436,7 @@
     },
     {
       "id": 30,
-      "question": "How often do you questions things deemed as 'common sense' — do you usually accept them at face value, or look for alternative perspectives?",
+      "question": "How often do you question things deemed as 'common sense' — do you usually accept them at face value, or look for alternative perspectives?",
       "dichotomy": "S/N",
       "functions": {
         "S": [
@@ -524,4 +524,4 @@
         ]
       }
     }
-  ]
+]
