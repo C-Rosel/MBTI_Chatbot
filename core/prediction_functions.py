@@ -13,7 +13,7 @@ TF_model = joblib.load("tf_model.joblib")
 JP_model = joblib.load("jp_model.joblib")
 
 # load embedding model
-embed_model = SentenceTransformer("embed_model_all_mpnet")
+embed_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 def predict_EI(question_id, user_answer):
     # prepare input as used during training
