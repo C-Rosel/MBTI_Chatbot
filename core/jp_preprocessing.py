@@ -26,7 +26,7 @@ import numpy as np
 df = pd.read_json("data/jp_training.jsonl", lines=True)
 
 # embedding model
-embed_model = SentenceTransformer("embed_model_all_mpnet")
+embed_model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 # adapt data to include question and aswer for training -> better accuracy
 adapted_df = ("Q: " + df['question_id'].astype(str) + "A: " + df['text']).tolist()

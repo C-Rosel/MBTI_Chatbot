@@ -57,4 +57,4 @@ print(classification_report(y_test, y_pred))
 
 # save model
 joblib.dump(EI_model, "ei_model.joblib")
-embed_model.save("embed_model_all_mpnet")
+# joblib.dump(embed_model, "embed_model.joblib")
