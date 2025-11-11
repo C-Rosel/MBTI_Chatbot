@@ -11,7 +11,6 @@
 {"question_id": 2, "label": "S", "text": "When pondering a situation or solving a problem, I usually focus on concrete facts and details"}
 {"question_id": 2, "label": "S", "text": "I usually focus on concrete facts and details"}
 {"question_id": 2, "label": "S", "text": "concrete facts and details"}
-
 {"question_id": 2, "label": "N", "text": "I focus on patterns and possibilities when thinking through problems."}
 {"question_id": 2, "label": "N", "text": "I naturally look for the bigger picture rather than isolated details."}
 {"question_id": 2, "label": "N", "text": "I explore potential meanings and ideas beyond the facts."}
@@ -25,7 +24,6 @@
 {"question_id": 2, "label": "N", "text": "When pondering a situation or solving a problem, I usually focus on patterns and possibilities"}
 {"question_id": 2, "label": "N", "text": "I usually focus on patterns and possibilities"}
 {"question_id": 2, "label": "N", "text": "patterns and possibilities"}
-
 {"question_id": 3, "label": "S", "text": "I'd rather be stuck in a rut, relying on familiar and practical methods."}
 {"question_id": 3, "label": "S", "text": "I prefer routines over unpredictable ideas when solving problems."}
 {"question_id": 3, "label": "S", "text": "Stability and proven methods feel more reliable to me."}
@@ -39,7 +37,6 @@
 {"question_id": 3, "label": "S", "text": "I would rather be 'stuck in a rut' when trying to find a solution to something"}
 {"question_id": 3, "label": "S", "text": "I would rather be 'stuck in a rut'"}
 {"question_id": 3, "label": "S", "text": "stuck in a rut"}
-
 {"question_id": 3, "label": "N", "text": "I'd rather have my head in the clouds, exploring new possibilities."}
 {"question_id": 3, "label": "N", "text": "I’m more inspired by imagination than routine when solving problems."}
 {"question_id": 3, "label": "N", "text": "Thinking creatively helps me more than sticking to old patterns."}
@@ -53,7 +50,6 @@
 {"question_id": 3, "label": "N", "text": "I would rather have my 'head in the clouds' when trying to find a solution to something"}
 {"question_id": 3, "label": "N", "text": "I would rather have my 'head in the clouds'"}
 {"question_id": 3, "label": "N", "text": "head in the clouds"}
-
 {"question_id": 9, "label": "S", "text": "I naturally gravitate toward sensible and realistic people."}
 {"question_id": 9, "label": "S", "text": "I connect best with people who stay grounded and practical."}
 {"question_id": 9, "label": "S", "text": "I admire individuals who focus on what's real and workable."}
@@ -67,7 +63,6 @@
 {"question_id": 9, "label": "S", "text": "I seek people who are sensible and realistic"}
 {"question_id": 9, "label": "S", "text": "people who are sensible and realistic"}
 {"question_id": 9, "label": "S", "text": "sensible and realistic"}
-
 {"question_id": 9, "label": "N", "text": "I’m drawn to imaginative and innovative people."}
 {"question_id": 9, "label": "N", "text": "I connect best with those who think creatively and symbolically."}
 {"question_id": 9, "label": "N", "text": "I admire people who come up with original and visionary ideas."}
@@ -81,7 +76,6 @@
 {"question_id": 9, "label": "N", "text": "I seek people who are imaginative and innovative"}
 {"question_id": 9, "label": "N", "text": "people who are imaginative and innovative"}
 {"question_id": 9, "label": "N", "text": "imaginative and innovative"}
-
 {"question_id": 10, "label": "S", "text": "I’m more attracted to solutions that are practical and experience-based."}
 {"question_id": 10, "label": "S", "text": "I prefer ideas that are proven to work in real life."}
 {"question_id": 10, "label": "S", "text": "I trust approaches that have been tested and demonstrated."}
@@ -94,7 +88,6 @@
 {"question_id": 10, "label": "S", "text": "I trust hands-on experience more than abstract theories."}
 {"question_id": 10, "label": "S", "text": "I am more attracted to feasible solutions based on practical experience"}
 {"question_id": 10, "label": "S", "text": "feasible solutions based on practical experience"}
-
 {"question_id": 10, "label": "N", "text": "I’m more drawn to visionary ideas that push boundaries."}
 {"question_id": 10, "label": "N", "text": "I get excited by approaches that challenge the status quo."}
 {"question_id": 10, "label": "N", "text": "I prefer innovative ideas even if they haven’t been tested much."}
@@ -108,7 +101,6 @@
 {"question_id": 10, "label": "N", "text": "I am more attracted to visionary ideas that challenge the status quo"}
 {"question_id": 10, "label": "N", "text": "visionary ideas that challenge the status quo"}
 {"question_id": 10, "label": "N", "text": "visionary ideas"}
-
 {"question_id": 16, "label": "S", "text": "I tend to do daily tasks the usual, tried-and-true way."}
 {"question_id": 16, "label": "S", "text": "I prefer sticking to familiar routines for everyday activities."}
 {"question_id": 16, "label": "S", "text": "I feel comfortable following established methods."}
@@ -122,7 +114,6 @@
 {"question_id": 16, "label": "S", "text": "With daily or ordinary tasks, I tend to do them the usual, well-known way"}
 {"question_id": 16, "label": "S", "text": "I tend to do them the usual, well-known way"}
 {"question_id": 16, "label": "S", "text": "usual, well-known way"}
-
 {"question_id": 16, "label": "N", "text": "I look for new and different ways to do routine tasks."}
 {"question_id": 16, "label": "N", "text": "I enjoy experimenting with fresh approaches to daily activities."}
 {"question_id": 16, "label": "N", "text": "I like finding creative alternatives to common routines."}
@@ -136,7 +127,6 @@
 {"question_id": 16, "label": "N", "text": "With daily or ordinary tasks, I look for new and different approaches"}
 {"question_id": 16, "label": "N", "text": "I look for new and different approaches"}
 {"question_id": 16, "label": "N", "text": "new and different approaches"}
-
 {"question_id": 17, "label": "S", "text": "I appreciate straightforward and direct communication."}
 {"question_id": 17, "label": "S", "text": "I prefer when people say exactly what they mean without extra layers."}
 {"question_id": 17, "label": "S", "text": "Clear, simple communication works best for me."}
@@ -149,7 +139,6 @@
 {"question_id": 17, "label": "S", "text": "I like when people communicate in a concrete and literal way."}
 {"question_id": 17, "label": "S", "text": "I appreciate straight-forward, direct communication"}
 {"question_id": 17, "label": "S", "text": "straight-forward, direct communication"}
-
 {"question_id": 17, "label": "N", "text": "I enjoy nuanced, layered conversations."}
 {"question_id": 17, "label": "N", "text": "I like when people speak in analogies or metaphors."}
 {"question_id": 17, "label": "N", "text": "I appreciate deeper meaning behind the words people use."}
@@ -164,7 +153,6 @@
 {"question_id": 17, "label": "N", "text": "more nuanced, layered conversations and the use of analogies"}
 {"question_id": 17, "label": "N", "text": "I appreciate more nuanced, layered conversations"}
 {"question_id": 17, "label": "N", "text": "use of analogies"}
-
 {"question_id": 23, "label": "S", "text": "I see facts and statistics as straightforward pieces of information."}
 {"question_id": 23, "label": "S", "text": "I treat data as concrete details to work with, nothing more."}
 {"question_id": 23, "label": "S", "text": "Facts are simply facts to me, not symbols for something deeper."}
@@ -178,7 +166,6 @@
 {"question_id": 23, "label": "S", "text": "When I encounter facts or statistics, I think about them as self-contained pieces of information"}
 {"question_id": 23, "label": "S", "text": "I think about them as self-contained pieces of information"}
 {"question_id": 23, "label": "S", "text": "self-contained pieces of information"}
-
 {"question_id": 23, "label": "N", "text": "I often see facts as clues pointing to bigger ideas."}
 {"question_id": 23, "label": "N", "text": "Statistics spark thoughts about broader patterns or meanings."}
 {"question_id": 23, "label": "N", "text": "I naturally interpret data as part of a larger picture."}
@@ -192,7 +179,6 @@
 {"question_id": 23, "label": "N", "text": "When I encounter facts or statistics, I think about them as clues pointing toward a bigger idea"}
 {"question_id": 23, "label": "N", "text": "I think about them as clues pointing toward a bigger idea"}
 {"question_id": 23, "label": "N", "text": "clues pointing toward a bigger idea"}
-
 {"question_id": 24, "label": "S", "text": "I often find dreamers a bit impractical."}
 {"question_id": 24, "label": "S", "text": "Visionaries seem unrealistic to me most of the time."}
 {"question_id": 24, "label": "S", "text": "I prefer people who focus on what's feasible instead of abstract dreams."}
@@ -206,7 +192,6 @@
 {"question_id": 24, "label": "S", "text": "I find them impractical"}
 {"question_id": 24, "label": "S", "text": "I find visionaries and dreamers impractical"}
 {"question_id": 24, "label": "S", "text": "impractical"}
-
 {"question_id": 24, "label": "N", "text": "I admire visionaries and dreamers for their creativity."}
 {"question_id": 24, "label": "N", "text": "I find imaginative thinkers inspiring."}
 {"question_id": 24, "label": "N", "text": "I love hearing bold ideas about what could be."}
@@ -220,7 +205,6 @@
 {"question_id": 24, "label": "N", "text": "I admire the creativity of visionaries and dreamers"}
 {"question_id": 24, "label": "N", "text": "I admire their creativity"}
 {"question_id": 24, "label": "N", "text": "creativity"}
-
 {"question_id": 30, "label": "S", "text": "I tend to accept common sense at face value."}
 {"question_id": 30, "label": "S", "text": "If something is widely accepted, I usually trust it."}
 {"question_id": 30, "label": "S", "text": "I don't question common sense unless there's a clear reason to."}
@@ -234,7 +218,6 @@
 {"question_id": 30, "label": "S", "text": "I usually accept things deemed as 'common sense' at face value"}
 {"question_id": 30, "label": "S", "text": "I usually accept them at face value"}
 {"question_id": 30, "label": "S", "text": "face value"}
-
 {"question_id": 30, "label": "N", "text": "I often question things considered common sense."}
 {"question_id": 30, "label": "N", "text": "I look for alternative perspectives instead of accepting things as they are."}
 {"question_id": 30, "label": "N", "text": "Common sense makes me curious about what’s underneath it."}
@@ -247,7 +230,6 @@
 {"question_id": 30, "label": "N", "text": "I like exploring alternative interpretations rather than accepting the obvious."}
 {"question_id": 30, "label": "N", "text": "I usually look for alternative perspectives"}
 {"question_id": 30, "label": "N", "text": "alternative perspectives"}
-
 {"question_id": 31, "label": "S", "text": "I think children should focus on being useful around the household."}
 {"question_id": 31, "label": "S", "text": "I value practical skills more than imaginative play for kids."}
 {"question_id": 31, "label": "S", "text": "Children should learn responsibility through real tasks."}
@@ -262,7 +244,6 @@
 {"question_id": 31, "label": "S", "text": "focus on being useful to their households"}
 {"question_id": 31, "label": "S", "text": "useful to their households"}
 {"question_id": 31, "label": "S", "text": "I think children should focus on being useful to their households"}
-
 {"question_id": 31, "label": "N", "text": "I think children should be encouraged to explore and imagine."}
 {"question_id": 31, "label": "N", "text": "Imagination is essential for a child’s growth."}
 {"question_id": 31, "label": "N", "text": "Creative play helps kids think in new ways."}

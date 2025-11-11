@@ -12,7 +12,6 @@
 {"question_id": 6, "label": "J", "text": "strict deadlines to stick to"}
 {"question_id": 6, "label": "J", "text": "I like strict deadlines."}
 {"question_id": 6, "label": "J", "text": "strict deadlines."}
-
 {"question_id": 6, "label": "P", "text": "I let motivation guide my work."}
 {"question_id": 6, "label": "P", "text": "I prefer flexibility over strict deadlines."}
 {"question_id": 6, "label": "P", "text": "I work best when I follow my inspiration."}
@@ -27,7 +26,6 @@
 {"question_id": 6, "label": "P", "text": "let motivation guide your work"}
 {"question_id": 6, "label": "P", "text": "motivation"}
 {"question_id": 6, "label": "P", "text": "I prefer motivation over strict deadlines."}
-
 {"question_id": 7, "label": "J", "text": "I prefer to have a detailed itinerary when planning a trip."}
 {"question_id": 7, "label": "J", "text": "I like planning trips with specific schedules."}
 {"question_id": 7, "label": "J", "text": "I map out my trips day by day."}
@@ -42,7 +40,6 @@
 {"question_id": 7, "label": "J", "text": "detailed itinerary"}
 {"question_id": 7, "label": "J", "text": "When planning a trip, I choose a detailed itinerary."}
 {"question_id": 7, "label": "J", "text": "When planning a trip, I prefer to have a detailed itinerary."}
-
 {"question_id": 7, "label": "P", "text": "I like to leave trips open for spontaneous adventures."}
 {"question_id": 7, "label": "P", "text": "I prefer flexible travel plans."}
 {"question_id": 7, "label": "P", "text": "I enjoy exploring without a strict plan."}
@@ -57,7 +54,6 @@
 {"question_id": 7, "label": "P", "text": "I leave things open and spontaneous."}
 {"question_id": 7, "label": "P", "text": "When planning a trip I prefer spontaneous adventures."}
 {"question_id": 7, "label": "P", "text": "When planning a trip I prefer to leave things open for spontaneous adventures"}
-
 {"question_id": 13, "label": "J", "text": "I am a punctual person who values schedules."}
 {"question_id": 13, "label": "J", "text": "I always try to be on time."}
 {"question_id": 13, "label": "J", "text": "Schedules help me feel in control."}
@@ -72,7 +68,6 @@
 {"question_id": 13, "label": "J", "text": "I am a punctual person who values schedules."}
 {"question_id": 13, "label": "J", "text": "punctual person who values schedules"}
 {"question_id": 13, "label": "J", "text": "I value schedules."}
-
 {"question_id": 13, "label": "P", "text": "I am a laid-back person who goes with the flow."}
 {"question_id": 13, "label": "P", "text": "I'm flexible with time and schedules."}
 {"question_id": 13, "label": "P", "text": "I don't mind changing plans often."}
@@ -89,7 +84,6 @@
 {"question_id": 13, "label": "P", "text": "goes with the flow"}
 {"question_id": 13, "label": "P", "text": "I go with the flow."}
 {"question_id": 13, "label": "P", "text": "I am laid-back and flexible."}
-
 {"question_id": 14, "label": "J", "text": "I keep my environment neat and organized."}
 {"question_id": 14, "label": "J", "text": "I like everything to have its place."}
 {"question_id": 14, "label": "J", "text": "I feel better in a tidy environment."}
@@ -104,7 +98,6 @@
 {"question_id": 14, "label": "J", "text": "I tend to keep my environment neat and organized."}
 {"question_id": 14, "label": "J", "text": "neat and organized"}
 {"question_id": 14, "label": "J", "text": "I prefer neatness."}
-
 {"question_id": 14, "label": "P", "text": "I tend to keep my environment messy or chaotic."}
 {"question_id": 14, "label": "P", "text": "My space is usually a bit cluttered."}
 {"question_id": 14, "label": "P", "text": "I don't mind a mess; it doesn't bother me."}
@@ -118,7 +111,6 @@
 {"question_id": 14, "label": "P", "text": "messy or chaotic"}
 {"question_id": 14, "label": "P", "text": "I keep things messy."}
 {"question_id": 14, "label": "P", "text": "I keep my environment chaotic."}
-
 {"question_id": 20, "label": "J", "text": "I won't rest until a resolution is reached."}
 {"question_id": 20, "label": "J", "text": "I need closure on tasks and decisions."}
 {"question_id": 20, "label": "J", "text": "I feel uneasy when things are left unfinished."}
@@ -132,7 +124,6 @@
 {"question_id": 20, "label": "J", "text": "won't rest until a resolution is reached"}
 {"question_id": 20, "label": "J", "text": "I won't rest until things are resolved."}
 {"question_id": 20, "label": "J", "text": "I need a resolution."}
-
 {"question_id": 20, "label": "P", "text": "I often leave things open-ended."}
 {"question_id": 20, "label": "P", "text": "I'm fine with things staying unresolved for a while."}
 {"question_id": 20, "label": "P", "text": "I don't mind open-ended situations."}
@@ -146,7 +137,6 @@
 {"question_id": 20, "label": "P", "text": "leave things open-ended"}
 {"question_id": 20, "label": "P", "text": "I leave things open-ended."}
 {"question_id": 20, "label": "P", "text": "open-ended"}
-
 {"question_id": 21, "label": "J", "text": "I consider myself a serious, determined person."}
 {"question_id": 21, "label": "J", "text": "I tend to take responsibilities seriously."}
 {"question_id": 21, "label": "J", "text": "I am focused and committed in most things I do."}
@@ -160,7 +150,6 @@
 {"question_id": 21, "label": "J", "text": "serious, determined person"}
 {"question_id": 21, "label": "J", "text": "I am a serious and determined person."}
 {"question_id": 21, "label": "J", "text": "I see myself as serious and determined."}
-
 {"question_id": 21, "label": "P", "text": "I consider myself approachable and easy-going."}
 {"question_id": 21, "label": "P", "text": "I'm relaxed and flexible in most situations."}
 {"question_id": 21, "label": "P", "text": "I tend to go with the flow and stay chill."}
@@ -174,7 +163,6 @@
 {"question_id": 21, "label": "P", "text": "approachable and easy-going"}
 {"question_id": 21, "label": "P", "text": "I am approachable and easy-going."}
 {"question_id": 21, "label": "P", "text": "I see myself as easy-going."}
-
 {"question_id": 27, "label": "J", "text": "I prefer to guide events through careful planning and choice."}
 {"question_id": 27, "label": "J", "text": "I like to make deliberate choices to shape outcomes."}
 {"question_id": 27, "label": "J", "text": "I prefer planning things rather than leaving them to chance."}
@@ -188,7 +176,6 @@
 {"question_id": 27, "label": "J", "text": "guide events through careful planning"}
 {"question_id": 27, "label": "J", "text": "I guide events through careful planning."}
 {"question_id": 27, "label": "J", "text": "careful planning and choice"}
-
 {"question_id": 27, "label": "P", "text": "I prefer to let events happen naturally by chance."}
 {"question_id": 27, "label": "P", "text": "I enjoy letting life unfold without forcing it."}
 {"question_id": 27, "label": "P", "text": "I go with the flow and see what happens."}
@@ -202,7 +189,6 @@
 {"question_id": 27, "label": "P", "text": "let them happen naturally by chance"}
 {"question_id": 27, "label": "P", "text": "I let events happen naturally."}
 {"question_id": 27, "label": "P", "text": "naturally by chance"}
-
 {"question_id": 28, "label": "J", "text": "The satisfaction of finishing something appeals to me more."}
 {"question_id": 28, "label": "J", "text": "I prefer completing tasks to simply exploring possibilities."}
 {"question_id": 28, "label": "J", "text": "Closing projects gives me a sense of accomplishment."}
@@ -216,7 +202,6 @@
 {"question_id": 28, "label": "J", "text": "the satisfaction of finishing it"}
 {"question_id": 28, "label": "J", "text": "I prefer the satisfaction of finishing it."}
 {"question_id": 28, "label": "J", "text": "finishing something satisfies me more."}
-
 {"question_id": 28, "label": "P", "text": "The opportunity and ability to do something appeals to me more."}
 {"question_id": 28, "label": "P", "text": "I enjoy exploring possibilities more than finishing tasks."}
 {"question_id": 28, "label": "P", "text": "I love the excitement of starting new things."}
@@ -230,7 +215,6 @@
 {"question_id": 28, "label": "P", "text": "the opportunity and ability to do something"}
 {"question_id": 28, "label": "P", "text": "I prefer the opportunity and ability to do something."}
 {"question_id": 28, "label": "P", "text": "opportunity appeals to me more."}
-
 {"question_id": 34, "label": "J", "text": "The ability to organize and complete tasks is more important to me."}
 {"question_id": 34, "label": "J", "text": "I value task completion and structure."}
 {"question_id": 34, "label": "J", "text": "Organizing and finishing tasks is a priority for me."}
@@ -244,7 +228,6 @@
 {"question_id": 34, "label": "J", "text": "the ability to organize and complete tasks"}
 {"question_id": 34, "label": "J", "text": "I value the ability to organize and complete tasks."}
 {"question_id": 34, "label": "J", "text": "organize and complete tasks"}
-
 {"question_id": 34, "label": "P", "text": "The ability to adapt and respond to new information is more important to me."}
 {"question_id": 34, "label": "P", "text": "I value flexibility and adaptability."}
 {"question_id": 34, "label": "P", "text": "I respond well to unexpected changes."}
@@ -258,7 +241,6 @@
 {"question_id": 34, "label": "P", "text": "the ability to adapt and respond to new information"}
 {"question_id": 34, "label": "P", "text": "I value adapting and responding to new information."}
 {"question_id": 34, "label": "P", "text": "adapt and respond to new information"}
-
 {"question_id": 35, "label": "J", "text": "I prefer to plan out new projects step by step."}
 {"question_id": 35, "label": "J", "text": "I like detailed project planning."}
 {"question_id": 35, "label": "J", "text": "I organize my projects before beginning."}
@@ -274,7 +256,6 @@
 {"question_id": 35, "label": "J", "text": "plan it out step by step"}
 {"question_id": 35, "label": "J", "text": "I plan it out step by step."}
 {"question_id": 35, "label": "J", "text": "step by step planning"}
-
 {"question_id": 35, "label": "P", "text": "I choose a starting point and dive in, adjusting as I go."}
 {"question_id": 35, "label": "P", "text": "I like starting projects without too much planning."}
 {"question_id": 35, "label": "P", "text": "I prefer to figure things out along the way."}
@@ -289,5 +270,3 @@
 {"question_id": 35, "label": "P", "text": "choose a starting point to dive in and adjust as I go"}
 {"question_id": 35, "label": "P", "text": "I dive in and adjust as I go."}
 {"question_id": 35, "label": "P", "text": "adjust as I go"}
-
-

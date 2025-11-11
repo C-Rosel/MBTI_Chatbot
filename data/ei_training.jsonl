@@ -22,7 +22,6 @@
 {"question_id": 1, "label": "I", "text": "I stick with a few familiar ones."}
 {"question_id": 1, "label": "E", "text": "I spend my time seeking out lots of new people."}
 {"question_id": 1, "label": "I", "text": "I spenf my time sticking with a few familiar ones."}
-
 {"question_id": 8, "label": "E", "text": "After long social events I usually feel upbeat and energized."}
 {"question_id": 8, "label": "E", "text": "Spending time with people leaves me refreshed and excited."}
 {"question_id": 8, "label": "E", "text": "The more I interact socially, the more energized I feel."}
@@ -35,7 +34,6 @@
 {"question_id": 8, "label": "E", "text": "Talking to many people boosts my mood rather than exhausting me."}
 {"question_id": 8, "label": "E", "text": "After long periods of social interaction, I usually feel energized and refreshed"}
 {"question_id": 8, "label": "E", "text": "energized and refreshed"}
-
 {"question_id": 8, "label": "I", "text": "After a long day of social interaction I feel completely drained."}
 {"question_id": 8, "label": "I", "text": "Spending lots of time with others tires me out and I need quiet afterward."}
 {"question_id": 8, "label": "I", "text": "Prolonged socializing usually leaves me exhausted."}
@@ -48,7 +46,6 @@
 {"question_id": 8, "label": "I", "text": "Social activities drain me instead of energizing me."}
 {"question_id": 8, "label": "I", "text": "After long periods of social interaction, I usually feel drained and in need of alone time"}
 {"question_id": 8, "label": "I", "text": "drained and in need of alone time"}
-
 {"question_id": 15, "label": "E", "text": "I’m always eager to meet people and share experiences with them."}
 {"question_id": 15, "label": "E", "text": "Connecting with others feels exciting and natural for me."}
 {"question_id": 15, "label": "E", "text": "I love being around people and engaging in shared activities."}
@@ -62,7 +59,6 @@
 {"question_id": 15, "label": "E", "text": "I find myself eager to connect with people and share experiences"}
 {"question_id": 15, "label": "E", "text": "eager to connect with people and share experiences"}
 {"question_id": 15, "label": "E", "text": "eager to connect and share experiences"}
-
 {"question_id": 15, "label": "I", "text": "I’m more reserved and prefer deeper one-on-one conversations."}
 {"question_id": 15, "label": "I", "text": "I value quiet reflection over constant interaction."}
 {"question_id": 15, "label": "I", "text": "I tend to observe first and speak more during meaningful conversations."}
@@ -75,7 +71,6 @@
 {"question_id": 15, "label": "I", "text": "I prefer quiet moments and deeper conversations to group activities."}
 {"question_id": 15, "label": "I", "text": "I find myself more reserved and reflective, preferring deeper one-on-one interactions"}
 {"question_id": 15, "label": "I", "text": "more reserved and reflective, preferring deeper one-on-one interactions"}
-
 {"question_id": 22, "label": "E", "text": "I prefer to improvise during social interactions and go with the flow."}
 {"question_id": 22, "label": "E", "text": "I usually speak spontaneously without rehearsing what I’ll say."}
 {"question_id": 22, "label": "E", "text": "I feel comfortable improvising in conversations."}
@@ -89,7 +84,6 @@
 {"question_id": 22, "label": "E", "text": "I prefer to improvise as I go"}
 {"question_id": 22, "label": "E", "text": "improvise as I go"}
 {"question_id": 22, "label": "E", "text": "improvise"}
-
 {"question_id": 22, "label": "I", "text": "I often rehearse what I’m going to say before speaking."}
 {"question_id": 22, "label": "I", "text": "I like to prepare mentally before entering social situations."}
 {"question_id": 22, "label": "I", "text": "I script or rehearse conversations in my head in advance."}
@@ -103,7 +97,6 @@
 {"question_id": 22, "label": "I", "text": "I tend to rehearse what I’ll say in social situations"}
 {"question_id": 22, "label": "I", "text": "rehearse what I’ll say in social situations"}
 {"question_id": 22, "label": "I", "text": "rehearse what I’ll say"}
-
 {"question_id": 29, "label": "E", "text": "I usually walk up and introduce myself when I meet someone new."}
 {"question_id": 29, "label": "E", "text": "Starting conversations with strangers comes naturally to me."}
 {"question_id": 29, "label": "E", "text": "I'm often the first one to say hello in new social situations."}
@@ -116,7 +109,6 @@
 {"question_id": 29, "label": "E", "text": "I'm often the one to break the silence and start talking."}
 {"question_id": 29, "label": "E", "text": "In a social gathering, I usually find myself initiating conversations"}
 {"question_id": 29, "label": "E", "text": "initiate conversations"}
-
 {"question_id": 29, "label": "I", "text": "I usually wait for others to approach me when meeting new people."}
 {"question_id": 29, "label": "I", "text": "I feel more comfortable letting others start the conversation first."}
 {"question_id": 29, "label": "I", "text": "I rarely initiate introductions unless I have to."}

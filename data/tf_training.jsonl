@@ -11,7 +11,6 @@
 {"question_id": 4, "label": "T", "text": "I am more guided by objective principles and logic."}
 {"question_id": 4, "label": "T", "text": "Objective principles and logic guide me."}
 {"question_id": 4, "label": "T", "text": "objective principles and logic"}
-
 {"question_id": 4, "label": "F", "text": "Personal values influence my decisions more than logic."}
 {"question_id": 4, "label": "F", "text": "I care about how choices impact others emotionally."}
 {"question_id": 4, "label": "F", "text": "I prioritize harmony and compassion in my decisions."}
@@ -25,7 +24,6 @@
 {"question_id": 4, "label": "F", "text": "I am more guided by personal values and the feelings of others."}
 {"question_id": 4, "label": "F", "text": "personal values and the feelings of others guide me"}
 {"question_id": 4, "label": "F", "text": "feelings of others"}
-
 {"question_id": 5, "label": "T", "text": "I’m persuaded more by solid logic than emotion."}
 {"question_id": 5, "label": "T", "text": "A well-supported argument usually convinces me."}
 {"question_id": 5, "label": "T", "text": "Facts and reasoning win me over more than emotional stories."}
@@ -39,7 +37,6 @@
 {"question_id": 5, "label": "T", "text": "A convincing argument is more likely to win me over."}
 {"question_id": 5, "label": "T", "text": "I am won over by a convincing argument."}
 {"question_id": 5, "label": "T", "text": "convincing argument"}
-
 {"question_id": 5, "label": "F", "text": "Emotional sincerity affects me more than logic."}
 {"question_id": 5, "label": "F", "text": "I’m moved more by heartfelt appeals."}
 {"question_id": 5, "label": "F", "text": "Empathy and warmth speak louder to me than logic."}
@@ -53,7 +50,6 @@
 {"question_id": 5, "label": "F", "text": "A heartfelt appeal is more likely to win me over."}
 {"question_id": 5, "label": "F", "text": "I am won over by a heartfelt appeal."}
 {"question_id": 5, "label": "F", "text": "heartfelt appeal"}
-
 {"question_id": 11, "label": "T", "text": "I turn to rules and objective standards when evaluating tough situations."}
 {"question_id": 11, "label": "T", "text": "Fairness based on logic guides my judgment."}
 {"question_id": 11, "label": "T", "text": "I prioritize objective criteria over emotional nuance."}
@@ -68,7 +64,6 @@
 {"question_id": 11, "label": "T", "text": "I usually fall back on laws and objective criteria"}
 {"question_id": 11, "label": "T", "text": "laws and objective criteria"}
 {"question_id": 11, "label": "T", "text": "I use objective criteria to judge tricky situations."}
-
 {"question_id": 11, "label": "F", "text": "I try to understand people’s feelings when judging a situation."}
 {"question_id": 11, "label": "F", "text": "Empathy guides my decisions in complex problems."}
 {"question_id": 11, "label": "F", "text": "I consider context and circumstances before rules."}
@@ -82,7 +77,6 @@
 {"question_id": 11, "label": "F", "text": "When judging a tricky situation, I usually fall back on empathy and the circumstances involved."}
 {"question_id": 11, "label": "F", "text": "empathy and the circumstances involved"}
 {"question_id": 11, "label": "F", "text": "I rely on empathy when judging tricky situations."}
-
 {"question_id": 12, "label": "T", "text": "I prefer to be truthful even if the truth is uncomfortable."}
 {"question_id": 12, "label": "T", "text": "Direct communication feels more respectful to me."}
 {"question_id": 12, "label": "T", "text": "I value honesty over avoiding discomfort."}
@@ -97,7 +91,6 @@
 {"question_id": 12, "label": "T", "text": "I usually prioritize being truthful and direct."}
 {"question_id": 12, "label": "T", "text": "truthful and direct"}
 {"question_id": 12, "label": "T", "text": "I choose truth and directness when opinions differ."}
-
 {"question_id": 12, "label": "F", "text": "I try to be tactful so I don’t hurt anyone’s feelings."}
 {"question_id": 12, "label": "F", "text": "I value being considerate when discussing disagreements."}
 {"question_id": 12, "label": "F", "text": "Harmony matters more to me than blunt honesty."}
@@ -112,7 +105,6 @@
 {"question_id": 12, "label": "F", "text": "I usually prioritize being tactful and considerate."}
 {"question_id": 12, "label": "F", "text": "tactful and considerate"}
 {"question_id": 12, "label": "F", "text": "being tactful and considerate matters to me"}
-
 {"question_id": 18, "label": "T", "text": "I appreciate consistency and logical flow in discussions."}
 {"question_id": 18, "label": "T", "text": "Clear reasoning stands out to me in group conversations."}
 {"question_id": 18, "label": "T", "text": "I prefer discussions that follow logical structure."}
@@ -127,7 +119,6 @@
 {"question_id": 18, "label": "T", "text": "consistency of thought appeals more to me."}
 {"question_id": 18, "label": "T", "text": "consistency of thought"}
 {"question_id": 18, "label": "T", "text": "I prefer consistency of thought in group discussions."}
-
 {"question_id": 18, "label": "F", "text": "I value harmony in group discussions."}
 {"question_id": 18, "label": "F", "text": "I want everyone to feel at ease when talking."}
 {"question_id": 18, "label": "F", "text": "Group cohesion matters more than strict logic."}
@@ -142,7 +133,6 @@
 {"question_id": 18, "label": "F", "text": "harmony among participants appeals more to me."}
 {"question_id": 18, "label": "F", "text": "harmony among participants"}
 {"question_id": 18, "label": "F", "text": "I prefer harmony in group discussion."}
-
 {"question_id": 19, "label": "T", "text": "Making judgments through logical reasoning comes naturally to me."}
 {"question_id": 19, "label": "T", "text": "I default to logic when evaluating a situation."}
 {"question_id": 19, "label": "T", "text": "I usually rely on rational analysis before anything else."}
@@ -156,7 +146,6 @@
 {"question_id": 19, "label": "T", "text": "What comes to me more naturally is making judgements based on logical reasoning."}
 {"question_id": 19, "label": "T", "text": "making judgements based on logical reasoning."}
 {"question_id": 19, "label": "T", "text": "logical reasoning"}
-
 {"question_id": 19, "label": "F", "text": "My values and the social impact of my choices guide me more than logic."}
 {"question_id": 19, "label": "F", "text": "I naturally consider how my decisions affect people."}
 {"question_id": 19, "label": "F", "text": "Emotional and ethical impact matters more to me than pure logic."}
@@ -170,7 +159,6 @@
 {"question_id": 19, "label": "F", "text": "What comes to me more naturally is making judgements based on my values and social impact."}
 {"question_id": 19, "label": "F", "text": "making judgements based on my values and social impact."}
 {"question_id": 19, "label": "F", "text": "my values and social impact"}
-
 {"question_id": 25, "label": "T", "text": "I stay cool-headed when making tough decisions."}
 {"question_id": 25, "label": "T", "text": "I keep my emotions out of difficult choices."}
 {"question_id": 25, "label": "T", "text": "I stay calm and rational under pressure."}
@@ -184,7 +172,6 @@
 {"question_id": 25, "label": "T", "text": "When confronted with a tough decision, I act cool-headed."}
 {"question_id": 25, "label": "T", "text": "I act cool-headed."}
 {"question_id": 25, "label": "T", "text": "cool-headed"}
-
 {"question_id": 25, "label": "F", "text": "I tend to be warm-hearted when making tough decisions."}
 {"question_id": 25, "label": "F", "text": "I consider people’s feelings when choosing what to do."}
 {"question_id": 25, "label": "F", "text": "I let empathy play a role in hard decisions."}
@@ -198,7 +185,6 @@
 {"question_id": 25, "label": "F", "text": "When confronted with a tough decision, I act warm-hearted."}
 {"question_id": 25, "label": "F", "text": "I act warm-hearted."}
 {"question_id": 25, "label": "F", "text": "warm-hearted"}
-
 {"question_id": 26, "label": "T", "text": "In conflict, I prioritize being just and fair."}
 {"question_id": 26, "label": "T", "text": "Fairness and consistency are most important to me."}
 {"question_id": 26, "label": "T", "text": "I want everyone to be treated equally in conflict."}
@@ -212,7 +198,6 @@
 {"question_id": 26, "label": "T", "text": "When facing conflict, I prioritize being just and fair."}
 {"question_id": 26, "label": "T", "text": "I prioritize being just and fair."}
 {"question_id": 26, "label": "T", "text": "just and fair"}
-
 {"question_id": 26, "label": "F", "text": "In conflict, I prioritize being kind and merciful."}
 {"question_id": 26, "label": "F", "text": "Kindness matters more to me than strict fairness."}
 {"question_id": 26, "label": "F", "text": "I want to preserve harmony during conflict."}
@@ -226,7 +211,6 @@
 {"question_id": 26, "label": "F", "text": "When facing conflict, I prioritize being kind and merciful."}
 {"question_id": 26, "label": "F", "text": "I prioritize being kind and merciful."}
 {"question_id": 26, "label": "F", "text": "kind and merciful"}
-
 {"question_id": 32, "label": "T", "text": "I base important decisions on my known standards."}
 {"question_id": 32, "label": "T", "text": "I rely on established principles when deciding."}
 {"question_id": 32, "label": "T", "text": "I use consistent criteria to guide big decisions."}
@@ -240,7 +224,6 @@
 {"question_id": 32, "label": "T", "text": "When making important decisions, I base them on my known standards."}
 {"question_id": 32, "label": "T", "text": "I base decisions on my known standards."}
 {"question_id": 32, "label": "T", "text": "my known standards"}
-
 {"question_id": 32, "label": "F", "text": "I rely on how I’m feeling in the moment to make important decisions."}
 {"question_id": 32, "label": "F", "text": "My feelings guide major choices."}
 {"question_id": 32, "label": "F", "text": "I follow my emotional instincts when deciding."}
@@ -254,7 +237,6 @@
 {"question_id": 32, "label": "F", "text": "When making important decisions, I base them on how I am feeling in the moment."}
 {"question_id": 32, "label": "F", "text": "I base decisions on how I'm feeling in the moment."}
 {"question_id": 32, "label": "F", "text": "how I'm feeling in the moment"}
-
 {"question_id": 33, "label": "T", "text": "I tend to be firm and objective with myself and others."}
 {"question_id": 33, "label": "T", "text": "I prioritize fairness and objectivity over comfort."}
 {"question_id": 33, "label": "T", "text": "I'm usually straightforward and rational with people."}
@@ -268,7 +250,6 @@
 {"question_id": 33, "label": "T", "text": "With others and with myself, I tend to be more firm and objective."}
 {"question_id": 33, "label": "T", "text": "I tend to be more firm and objective."}
 {"question_id": 33, "label": "T", "text": "firm and objective"}
-
 {"question_id": 33, "label": "F", "text": "I tend to be compassionate and gentle with myself and others."}
 {"question_id": 33, "label": "F", "text": "Kindness guides how I treat people."}
 {"question_id": 33, "label": "F", "text": "I try to be understanding rather than strict."}
