@@ -10,6 +10,19 @@ from pathlib import Path
 #from core.preprocessing import process_user_input
 #from core.scoring import update_scores, assess_results
 
+CSS_PATH = Path(__file__).parent / "visualization" / "style.css"
+
+def load_css():
+    css_path = Path(__file__).parent / "visualization" / "style.css"
+    if css_path.exists():
+        with open(css_path) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    else:
+        st.error(f"CSS file was not found.")
+
+# Load external CSS
+load_css()
+
 st.set_page_config(
     page_title="AI Project: TherapyBot", 
     layout="wide"
