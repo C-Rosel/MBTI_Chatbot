@@ -54,7 +54,7 @@ def predict_TF(question_id, user_answer):
 
     prob_T = TF_model.predict_proba(embeddings)[0][1]
 
-    if prob_T >= 5:
+    if prob_T >= 0.5:
         pred_label = "T"
     else:
         pred_label = "F"
@@ -68,7 +68,7 @@ def predict_JP(question_id, user_answer):
 
     prob_J = JP_model.predict_proba(embeddings)[0][1]
 
-    if prob_J >= 5:
+    if prob_J >= 0.5:
         pred_label = "J"
     else:
         pred_label = "P"
