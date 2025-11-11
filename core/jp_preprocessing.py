@@ -34,7 +34,7 @@ adapted_df = ("Q: " + df['question_id'].astype(str) + "A: " + df['text']).tolist
 # compute embeddings
 embeddings = embed_model.encode(adapted_df, show_progress_bar=True, convert_to_numpy=True)
 
-# E/I training
+# J/P training
 X = embeddings
 y = (df["label"] == 'J').astype(int).values # label-based indexer, 1 = J, 0 = P
 
