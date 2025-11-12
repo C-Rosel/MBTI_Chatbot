@@ -17,17 +17,17 @@ https://www.maximusveritas.com/wp-content/uploads/2017/07/MBTI-Personality-Type-
 
 Clone the repository:
 
-``` git clone https://github.com/C-Rosel/MBTI_Chatbot.git ```
+```git clone https://github.com/C-Rosel/MBTI_Chatbot.git```
 
 Create a python virtual environment (recommended):
 
-``` python3 -m venv .venv ```
+```python3 -m venv .venv```
 
-``` source .venv/bin/activate   # On Windows: .venv\Scripts\activate ```
+```source .venv/bin/activate   # On Windows: .venv\Scripts\activate```
 
 Install the requirements:
 
-``` pip install -r requirements.txt```
+```pip install -r requirements.txt```
 
 Run the app!
 
