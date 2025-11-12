@@ -7,56 +7,86 @@ import random
 import json 
 from pathlib import Path
 
-#from core.preprocessing import process_user_input
-#from core.scoring import update_scores, assess_results
+from core.prediction_functions import predict_dichotomy
+from core.scoring import determine_final_score
 
 st.set_page_config(
     page_title="AI Project: TherapyBot", 
     layout="wide"
 )
+ 
 
-#FIXME Placeholder functions: Remove once real functions are implemented
+def process_user_input(user_input, question_id, dichotomy=None):
+    # Call models from core, dichotomy logic implemented there
+    try:
+        # Use provided dichotomy or get from session state, default to E/I (not ideal but better than getting an eror)
+        if dichotomy is None:
+            dichotomy = st.session_state.get("current_dichotomy", "E/I")
+        
+        # calling model function from core.prediction_functions
+        label, prob = predict_dichotomy(question_id, user_input, dichotomy)
+        
+        # nice and pretty for update_scores
+        return {
+            dichotomy: {"label": label, "prob": prob}
+        } #this return is saved into 'analysis'
+    except Exception as e: #some error handling
+        st.error(f"Error processing input: {e}")
+        return None
 
-def process_user_input(user_input):
-    # Placeholder: In real implementation, analyze the input text
-    # For demo, return random analysis
-    analysis = {
-        "E/I": random.choice(["E", "I"]),
-        "S/N": random.choice(["S", "N"]),
-        "T/F": random.choice(["T", "F"]),
-        "J/P": random.choice(["J", "P"]),
-    }
-    return analysis
-
-def update_scores(current_scores, analysis):
-    # Placeholder: Update scores based on analysis
-    for dichotomy, trait in analysis.items():
-        current_scores[dichotomy] = current_scores.get(dichotomy, {})
-        current_scores[dichotomy][trait] = current_scores[dichotomy].get(trait, 0) + 1
-    return current_scores
+def update_scores(current_scores, analysis): #curr scores is dict in SS, analysis from above!
+    # here we keep track of scores across dichotomies for assess_results
+    if analysis is None:
+        return current_scores #empty meaning no user input to assess :3
+    
+    for dichotomy, prediction in analysis.items():
+        if dichotomy not in current_scores:
+            current_scores[dichotomy] = {"labels": [], "probs": []} 
+        
+        # appending the predicted label and probability
+        current_scores[dichotomy]["labels"].append(prediction["label"])
+        current_scores[dichotomy]["probs"].append(prediction["prob"])
+    
+    return current_scores #da loop, so we keep building on this until all questions are answered
 
 def assess_results():
-    # Placeholder: Display final results based on scores
-    scores = st.session_state.get('scores', {})
-    st.markdown("## Assessment Results")
-    st.markdown("Here is a summary of your personality assessment:")
-    tally = {}
-    for dichotomy, traits in scores.items():
-        dominant_trait = max(traits, key=traits.get)
-        tally[dichotomy] = dominant_trait
-    st.markdown("**Your dominant traits by dichotomy:**")
-    for d, t in tally.items():
-        st.markdown(f"- {d}: {t}")
-    st.markdown("**Your answers:**")
-    answers = st.session_state.get('answers', {})
-    for qid, ans in answers.items():
-        q = get_question_by_id(qid)
-        st.markdown(f"- **Q {qid}** ({q.get('dichotomy') if q else '??'}): {ans}")
-    st.markdown("**Simple tally by dichotomy (demo):**")
-    for d, c in tally.items():
-        st.markdown(f"- {d}: {c}")
-    st.markdown("\n_Add a scoring algorithm to convert these into MBTI letters._")
+    # call scoring logic and display results for user
 
+    scores = st.session_state.get('scores', {}) # all 20 questions processed
+    
+    if not scores or not any(scores.values()): # error handling fairy 
+        st.warning("No assessment data available.")
+        return
+    
+    st.markdown("## Assessment Results") #FIXME make this pretty later with the fonts when the work :(((
+    st.markdown("Here is a summary of your personality assessment:")
+    
+    # calling scoring from core
+    mbti_type, dichotomy_results = determine_final_score(scores)
+    
+    st.markdown("### Your MBTI Type: **" + mbti_type + "**")
+    st.markdown("**Breakdown by dichotomy:**")
+    
+    # dichotomy breakdown w. confidence #FIXME makeit dropdowns???
+    for dichotomy, result in dichotomy_results.items():
+        label = result["label"]
+        dominant_score = result["dominant_score"]
+        other_score = result["other_score"]
+        first_count = result["count_first"]
+        second_count = result["count_second"]
+        
+        # Determine which trait is which for display
+        trait_pair = dichotomy.split("/")
+        first_trait = trait_pair[0]
+        second_trait = trait_pair[1]
+        
+        # Display the trait scores as a balance
+        st.markdown(
+            f"- **{dichotomy}**: {label} "
+            f"({dominant_score:.1%} confidence vs {other_score:.1%})"
+        )
+    
+    
 # consts 
 MAX_CHAR = 150
 
@@ -104,18 +134,32 @@ def question_stream(text):
         time.sleep(0.05) #slower 
 
 def response_generator(): #this is random bs go haha. we can make it better later
-    response = random.choice(
+    response = random.choice( #i asked chat to make better anecdotes because mine were so awkward 
         [
-            "Interesting...",
-            "Thank you for sharing",
-            "Great, let's move on",
-            "Good progress",
+        "I can see how that fits with what you’ve shared so far",
+        "That really helps paint a clearer picture of how you move through the world",
+        "You seem very self-aware about that — that’s great to see",
+        "That’s consistent with the sense I’m getting from your other answers",
+        "It sounds like that approach has served you well over time",
+        "I can tell that’s something that comes naturally to you",
+        "That adds a nice layer of insight into your personality",
+        "You express that with a lot of clarity — it really shows your thought process",
+        "That gives a good sense of your rhythm and how you like to handle things",
+        "It sounds like you have a steady sense of what feels right for you",
+        "I can feel the authenticity in that answer",
+        "That response has a lot of grounded confidence behind it",
+        "It feels like that choice really reflects your core way of operating",
+        "That aligns nicely with the traits I’m picking up from you so far",
+        "There’s a real sense of balance in how you describe yourself",
+        "That comes across as very natural and true to your temperament",
+        "It’s clear you’ve thought about what works best for you in those moments",
+        "That perspective feels calm and intentional — very you",
+        "That’s a thoughtful way of putting it, and it fits your tone perfectly",
+        "I really like how genuine that answer feels"
         ]
 
     )
-    for word in response.split():
-        yield word + " "
-        time.sleep(0.05) 
+    return response 
 
 #rand functions
 
@@ -156,7 +200,7 @@ def get_question_by_id(qid): #fetch from big list of qs id from our sample set
 
 
 def show_current_question():
-    # display the current question and set session_state.current_q_id
+    # display the current question and set session_state.current_q_id and current_dichotomy
     idx = st.session_state.get("q_index", 0)  
     ids = st.session_state.get("selected_question_ids", []) 
     if idx >= len(ids):
@@ -168,8 +212,9 @@ def show_current_question():
     question_text = q.get("question", "Question text missing.")
     # stream it~
     st.chat_message("athena").write_stream(question_stream(question_text))
-    # store current id so next user response maps to it
+    # store current id and dichotomy so next user response maps to it
     st.session_state.current_q_id = qid
+    st.session_state.current_dichotomy = q.get("dichotomy", "E/I")  # default to E/I if missing
     return qid
 
 
@@ -180,7 +225,7 @@ def save_results():
     # format a nice analysis with graphics maybe a word map!! that can be done with nlp 
     msg.toast("Results saved!")
 
-#FIXME new session function? like a hard reset to avoid leftover values
+#FIXME new session function? like a hard reset to avoid leftover values eh stretch goal
        
 
 # for message in st.session_state.messages: #display msgs on app rerun eh perhaps not
@@ -268,7 +313,7 @@ if st.session_state.get('dev_mode', False) == True:
             st.markdown(resp)
         st.session_state.messages.append({"role": "developer", "content": resp})
 
-        analysis = process_user_input(resp)  # nlp processing of user input (placeholder)
+        analysis = process_user_input(resp, current_qid)  # nlp processing of user input
         st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis)
 
         # advance index and show next question (non-blocking)
@@ -283,7 +328,7 @@ if st.session_state.get('dev_mode', False) == True:
     st.chat_message("athena").write("Final scoring is next...")
     time.sleep(2)
     
-    assess_results() #FIXME implement this to show final results
+    assess_results() 
 
     if st.button("Save Results"):
         st.chat_message("athena").write("I'm saving your results now...")
@@ -295,15 +340,22 @@ else:
     if prompt := st.chat_input("Speak with Athena", max_chars=MAX_CHAR): #make into elif??
 
         user_name = st.session_state.get('user_name', None)
+        current_qid = st.session_state.get("current_q_id")
+        
         with st.chat_message("user"):
             st.markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
 
-        analysis = process_user_input(prompt) #nlp processing of user input #FIXME expand this to do actual analysis
+        analysis = process_user_input(prompt, current_qid)  # nlp processing of user input
 
         st.session_state['scores'] = update_scores(st.session_state.get('scores', {}), analysis) #update scores based on analysis
 
-        #placeholder Athena response
+        will_respond = random.random() < 0.8 #80% chance to respond
+        if will_respond:
+            current_response = response_generator() + (f", {user_name}." if user_name else ".")
+            st.chat_message("athena").write(current_response)
+            #st.session_state.messages.append({"role": "athena", "content": current_response})
+
         # current_response = response_generator() + ", {user_name}." if user_name else response_generator()
         # st.chat_message("athena").write_stream(current_response) #maybe a random probability of athena responding at all. 
 
@@ -321,11 +373,11 @@ else:
             if next_qid is not None:
                 st.session_state.messages.append({"role": "athena", "content": get_question_by_id(next_qid).get("question")})
         else:
-            st.chat_message("athena").write("Thank you for completing the assessment, {user_name}!" if user_name else "Thank you for completing the assessment!")
-            assess_results() #FIXME implement this to show final results
-            if st.button("Save Results"):
-                st.chat_message("athena").write("I'm saving your results now...")
-                save_results()
+            assess_results() 
+            # if st.button("Save Results"):
+            #     st.chat_message("athena").write("I'm saving your results now...")
+            #     save_results()
+            st.chat_message("athena").write(f"Thank you for completing the assessment, {user_name}!" if user_name else "Thank you for completing the assessment!")
 
 
 ## RESULTS to be implemented bar graph? idk too many ideas
