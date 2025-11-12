@@ -1,0 +1,18 @@
+[server]
+enableStaticServing = true
+
+[theme]
+primaryColor = "#cb785c"
+backgroundColor = "#fdfdf8"
+secondaryBackgroundColor = "#ecebe3"
+textColor = "#3d3a2a"
+linkColor = "#3d3a2a"
+borderColor = "#d3d2ca"
+showWidgetBorder = true
+baseRadius = "0.75rem"
+buttonRadius = "full"
+font = "SpaceGrotesk"
+codeFont = "SpaceMono"
+codeFontSize = ".75rem"
+codeBackgroundColor = "#ecebe4"
+chartCategoricalColors = ["#0ea5e9", "#059669", "#fbbf24"]
