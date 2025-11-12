@@ -1,14 +1,8 @@
 # CSE 4633 Fall 2025: AI Project 1
 
-AI Techniques used:
-* NLP 
-
 # Athena: MBTI Chatbot
 
 Athena is a twist on the traditional, popular Myer-Briggs Type Indicator (MBTI) personality assessment that is widely used in schools and the corporate world. Using advanced Natural Language Processing (NLP) techniques, Athena engages users in natural conversation and predicts the four MBTI dichotomies based on linguistic patterns observed in user dialogue.
-
-"" !! Disclaimer !!
-This project is for fun and entertainment purposes only. Not a licensed mental health professional. ""
 
 ⚠️ Disclaimer:
 This project is intended for fun and entertainment purposes only.
