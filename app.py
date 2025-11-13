@@ -10,8 +10,22 @@ from pathlib import Path
 from core.prediction_functions import predict_dichotomy
 from core.scoring import determine_final_score
 
+CSS_PATH = Path(__file__).parent / "visualization" / "style.css"
+
+def load_css():
+    css_path = CSS_PATH
+    if css_path.exists():
+        with open(css_path) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    else:
+        st.error(f"CSS file was not found.")
+
+# Load external CSS
+load_css()
+
+
 st.set_page_config(
-    page_title="AI Project: TherapyBot", 
+    page_title="AI Project: Athena", 
     layout="wide"
 )
  
@@ -232,6 +246,8 @@ def save_results():
 #     with st.chat_message(message["role"]): #author
 #         st.markdown(message["content"]) #content
 
+#Title 
+st.title("Athena - MBTI Chatbot")
 
 # state tracking flags
 if "begun" not in st.session_state:

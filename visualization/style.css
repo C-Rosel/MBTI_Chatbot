@@ -1,0 +1,90 @@
+/* ===== Athena Chatbot Theme ===== */
+
+/* Page background and text */
+body {
+    background-color: #f2fcff; /* very light blue-tinted white */
+    color: #003241; /* deep navy for text contrast */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Streamlit sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #eafaff;
+    border-right: 2px solid #c9f3fe;
+}
+
+/* Sidebar text and links */
+section[data-testid="stSidebar"] * {
+    color: #003241 !important;
+}
+
+/* Buttons */
+button[kind="primary"],
+.stButton > button {
+    background: linear-gradient(135deg, #37d2ff, #00bef4);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+button[kind="primary"]:hover,
+.stButton > button:hover {
+    background: linear-gradient(135deg, #00a5d4, #0091bb);
+    transform: scale(1.03);
+}
+
+/* Input fields and text areas */
+input, textarea, .stTextInput, .stTextArea {
+    background-color: #e2f8fe !important;
+    color: #003241 !important;
+    border-radius: 8px !important;
+    border: 1px solid #b1edfe !important;
+}
+
+/* Chat message containers (custom look for Athena-style bot) */
+div[data-testid="stChatMessage"] {
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+}
+
+div[data-testid="stChatMessage"][data-testid="stChatMessage-user"] {
+    background-color: #d2f5fe;
+    border-left: 5px solid #00bef4;
+}
+
+div[data-testid="stChatMessage"][data-testid="stChatMessage-assistant"] {
+    background-color: #eafaff;
+    border-left: 5px solid #37d2ff;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #004559;
+    font-weight: 700;
+}
+
+/* Links */
+a {
+    color: #00bef4;
+    text-decoration: none;
+}
+a:hover {
+    color: #0085ab;
+    text-decoration: underline;
+}
+
+/* Scrollbar styling (nice touch) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #00bef4;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0091bb;
+}
