@@ -1,35 +1,35 @@
 /* Fonts */
 @font-face {
   font-family: 'SpaceGrotesk';
-  src: url('/static/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+  src: url('SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/static/SpaceMono-Regular.ttf') format('truetype');
+  src: url('SpaceMono-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/static/SpaceMono-Italic.ttf') format('truetype');
+  src: url('SpaceMono-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/static/SpaceMono-Bold.ttf') format('truetype');
+  src: url('SpaceMono-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SpaceMono';
-  src: url('/static/SpaceMono-BoldItalic.ttf') format('truetype');
+  src: url('SpaceMono-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
 }
@@ -37,20 +37,73 @@
 
 /* Global text overrides */
 html, body, [class*="st-"] {
-  font-family: 'SpaceGrotesk', sans-serif;
+  font-family: 'SpaceGrotesk', sans-serif !important;
+  color: #3d3a2a !important;
+  background-color: #fdfdf8 !important;
 }
+
 code, pre {
-  font-family: 'SpaceMono', monospace;
+  font-family: 'SpaceMono', monospace !important;
+  background-color: #ecebe4 !important;
+  color: #3d3a2a !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'SpaceGrotesk', sans-serif !important;
+  color: #3d3a2a !important;
+  font-weight: 600 !important;
+}
+
+a {
+  color: #3d3a2a !important;
+  text-decoration: underline;
+}
+a:hover {
+  color: #cb785c !important;
 }
 
 /* Icon Color Override */
 
 /* Color of user icon */
 [data-testid="stChatMessageUser"] svg {
-  fill: #cb785c;  
+  fill: #cb785c !important; /* Coral accent */
 }
 
-/* Color of assistant icon */
+/* Assistant icon */
 [data-testid="stChatMessageAssistant"] svg {
-  fill: #66e3ff;  
+  fill: #66e3ff !important; /* Aqua accent */
+}
+
+[data-testid="stChatInputTextArea"] textarea {
+  border: 1.5px solid #d3d2ca !important;
+  border-radius: 0.75rem !important;
+  background-color: #fdfdf8 !important;
+  color: #3d3a2a !important;
+  font-family: 'SpaceGrotesk', sans-serif !important;
+  padding: 0.75rem !important;
+}
+
+/* Send button */
+button[kind="primary"] {
+  background-color: #cb785c !important;
+  color: #fdfdf8 !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  font-weight: 600 !important;
+  transition: background 0.2s ease-in-out;
+}
+button[kind="primary"]:hover {
+  background-color: #b96b51 !important;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cb785c;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f1;
 }
