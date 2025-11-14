@@ -32,3 +32,17 @@ Install the requirements:
 Run the app!
 
 ```streamlit run app.py```
+
+## Chat Interface
+
+We hosted our project on Streamlit, currently theming is only in our simplevisuals branch:
+
+https://github.com/user-attachments/assets/45491f58-0538-4ce2-ac2b-d6065acaa6b0
+
+## Results
+
+Your results will be computed instantly after taking the assessment, not personal information required ;)
+
+<img width="644" height="604" alt="Athena_results" src="https://github.com/user-attachments/assets/590fa55d-0ae7-465f-96c0-266a1b2b19a2" />
+
+
