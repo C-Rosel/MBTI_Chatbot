@@ -35,7 +35,7 @@ Run the app!
 
 ## Chat Interface
 
-We hosted our project on Streamlit, currently theming is only in our simplevisuals branch:
+Our project is powered by Streamlit and hosted locally, currently theming is only in our simplevisuals branch:
 
 https://github.com/user-attachments/assets/45491f58-0538-4ce2-ac2b-d6065acaa6b0
 
